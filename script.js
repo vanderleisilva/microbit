@@ -47,6 +47,7 @@ function disconnectButtonPressed() {
 }
 
 async function sendToMicrobit(num) {
+  console.log(num);
   let encoder = new TextEncoder();
   queueGattOperation(() =>
     rxCharacteristic
@@ -67,34 +68,3 @@ function onDisconnected(event) {
   let device = event.target;
   console.log(`Device ${device.name} is disconnected.`);
 }
-
-// Add event listeners for buttons
-document
-  .getElementById("up")
-  .addEventListener("mousedown", () => sendToMicrobit("4"));
-document
-  .getElementById("left")
-  .addEventListener("mousedown", () => sendToMicrobit("3"));
-document
-  .getElementById("right")
-  .addEventListener("mousedown", () => sendToMicrobit("2"));
-document
-  .getElementById("down")
-  .addEventListener("mousedown", () => sendToMicrobit("1"));
-
-document
-  .getElementById("up")
-  .addEventListener("mouseup", () => sendToMicrobit("X"));
-document
-  .getElementById("left")
-  .addEventListener("mouseup", () => sendToMicrobit("X"));
-document
-  .getElementById("right")
-  .addEventListener("mouseup", () => sendToMicrobit("X"));
-document
-  .getElementById("down")
-  .addEventListener("mouseup", () => sendToMicrobit("X"));
-
-document
-  .getElementById("connect-btn")
-  .addEventListener("click", connectToMicrobit);
