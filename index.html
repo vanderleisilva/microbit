@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro:bit Bluetooth Control</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Micro:bit <br />Controle Remoto</h1>
+
+    <div class="controls">
+      <!-- First row: Up button -->
+      <div class="spacer"></div>
+      <button class="control-btn" id="up">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <div class="spacer"></div>
+
+      <!-- Second row: Left, Spacer, Right buttons -->
+      <button class="control-btn" id="left">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <div class="spacer"></div>
+      <button class="control-btn" id="right">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+      <!-- Third row: Down button -->
+      <div class="spacer"></div>
+      <button class="control-btn" id="down">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <div class="spacer"></div>
+    </div>
+
+    <button id="connect-btn">Conectar</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
